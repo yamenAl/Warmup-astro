@@ -1,0 +1,19 @@
+# Netlify configuration for this Astro project
+# Build command and publish directory for the Netlify UI / CLI
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# If you use Netlify Functions for SSR, uncomment and adjust the functions directory:
+# functions = "netlify/functions"
+
+# Basic redirect to support SPA-style fallbacks if needed. Astro normally
+# generates static HTML for routes, but this ensures client-side routes still work.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[context.production.environment]
+# Set your production environment variables here, e.g.:
+# MY_VAR = "value"
